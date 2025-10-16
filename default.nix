@@ -17,6 +17,7 @@
   samloader = pkgs.callPackage ./pkgs/samloader { };
   gogextract = pkgs.callPackage ./pkgs/gogextract { };
   mmio = pkgs.callPackage ./pkgs/mmio { };
+  rgsstool = pkgs.callPackage ./pkgs/rgsstool { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...

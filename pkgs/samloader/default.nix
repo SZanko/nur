@@ -37,5 +37,6 @@ python3.pkgs.buildPythonApplication {
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [ szanko ];
     mainProgram = "samloader";
+    platforms = lib.platforms.all;
   };
 }
