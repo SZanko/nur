@@ -15,6 +15,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   samloader = pkgs.callPackage ./pkgs/samloader { };
+  gogextract = pkgs.callPackage ./pkgs/gogextract { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
