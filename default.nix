@@ -18,6 +18,7 @@
   gogextract = pkgs.callPackage ./pkgs/gogextract { };
   mmio = pkgs.callPackage ./pkgs/mmio { };
   rgsstool = pkgs.callPackage ./pkgs/rgsstool { };
+  jakym = pkgs.callPackage ./pkgs/jakym { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
