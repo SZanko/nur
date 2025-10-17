@@ -43,8 +43,8 @@ buildDotnetModule (finalAttrs:  {
 
   meta = {
     description = "Bethesda Archive Browser & Extractor";
-    homepage = "https://github.com/AlexxEG/BSA_Browser";
-    changelog = "https://github.com/AlexxEG/BSA_Browser/blob/${finalAttrs.src.rev}/CHANGELOG.txt";
+    homepage = "https://github.com/N3oRay/BSA_Browser";
+    changelog = "https://github.com/N3oRay/BSA_Browser/blob/${finalAttrs.src.rev}/CHANGELOG.txt";
     license = lib.licenses.gpl3Only;
     maintainers =
       let m = lib.maintainers or {};
