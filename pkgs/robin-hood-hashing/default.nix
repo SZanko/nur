@@ -20,12 +20,15 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
   ];
 
+  installPhase = ''
+    install -Dm644 "$src/src/include/robin_hood.h" "$out/include/robin_hood.h"
+  '';
+
   meta = {
     description = "Fast & memory efficient hashtable based on robin hood hashing for C++11/14/17/20";
     homepage = "https://github.com/martinus/robin-hood-hashing";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ szanko ];
-    mainProgram = "robin-hood-hashing";
     platforms = lib.platforms.all;
   };
 })
