@@ -19,6 +19,8 @@
   mmio = pkgs.callPackage ./pkgs/mmio { };
   rgsstool = pkgs.callPackage ./pkgs/rgsstool { };
   jakym = pkgs.callPackage ./pkgs/jakym { };
+  #radontea = pkgs.callPackage ./pkgs/radontea { };
+  robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
