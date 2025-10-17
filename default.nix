@@ -22,6 +22,7 @@
   #radontea = pkgs.callPackage ./pkgs/radontea { };
   robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
   pciids = pkgs.callPackage ./pkgs/pciids { };
+  autotoml = pkgs.callPackage ./pkgs/autotoml { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
