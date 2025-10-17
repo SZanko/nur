@@ -24,8 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
     description = "A header-only, constexpr alternative to gperf for C++14 users";
     homepage = "https://github.com/serge-sans-paille/frozen";
     license = lib.licenses.asl20;
-    maintainers = with lib.maintainers; [ szanko ];
-    mainProgram = "frozen-cpp";
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     platforms = lib.platforms.all;
   };
 })

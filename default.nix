@@ -29,6 +29,7 @@ pkgs ? import <nixpkgs> { }
   robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
   pciids = pkgs.callPackage ./pkgs/pciids { };
   autotoml = pkgs.callPackage ./pkgs/autotoml { };
+  frozencpp = pkgs.callPackage ./pkgs/frozen-cpp { };
   #nexus-autodl = pkgs2505.callPackage ./pkgs/nexus-autodl { };
   bsa-browser-cli = pkgs.callPackage ./pkgs/bsa-browser-cli { };
 
