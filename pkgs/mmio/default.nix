@@ -24,7 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
     description = "A cross-platform memory-mapped io library for C";
     homepage = "https://github.com/Ryan-rsm-McKenzie/mmio";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ ];
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     mainProgram = "mmio";
     platforms = lib.platforms.all;
   };

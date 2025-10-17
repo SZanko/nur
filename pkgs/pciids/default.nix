@@ -23,7 +23,9 @@ stdenv.mkDerivation {
     description = "The pci.ids file";
     homepage = "https://github.com/pciutils/pciids";
     license = with lib.licenses; [ gpl2Plus bsd3 ];
-    maintainers = with lib.maintainers; [ szanko ];
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     platforms = lib.platforms.all;
   };
 }

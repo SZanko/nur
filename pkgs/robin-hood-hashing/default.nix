@@ -28,7 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast & memory efficient hashtable based on robin hood hashing for C++11/14/17/20";
     homepage = "https://github.com/martinus/robin-hood-hashing";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ szanko ];
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     platforms = lib.platforms.all;
   };
 })

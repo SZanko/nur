@@ -29,7 +29,9 @@ stdenv.mkDerivation {
     description = "AutoTOML library";
     homepage = "https://github.com/Ryan-rsm-McKenzie/AutoTOML";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ szanko ];
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     platforms = lib.platforms.all;
   };
 }

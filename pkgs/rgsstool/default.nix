@@ -30,7 +30,9 @@ python3.pkgs.buildPythonApplication {
     description = "Tool to create and extract files from RPG Maker archives";
     homepage = "https://gitlab.com/rgss/rgsstool";
     license = lib.licenses.gpl3Only;
-    maintainers = with lib.maintainers; [ szanko ];
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     mainProgram = "rgsstool";
     platforms = lib.platforms.all;
   };

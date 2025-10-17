@@ -20,15 +20,15 @@ pkgs ? import <nixpkgs> { }
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  #samloader = pkgs.callPackage ./pkgs/samloader { };
+  samloader = pkgs.callPackage ./pkgs/samloader { };
   gogextract = pkgs.callPackage ./pkgs/gogextract { };
-  #mmio = pkgs.callPackage ./pkgs/mmio { };
-  #rgsstool = pkgs.callPackage ./pkgs/rgsstool { };
-  #jakym = pkgs.callPackage ./pkgs/jakym { };
+  mmio = pkgs.callPackage ./pkgs/mmio { };
+  rgsstool = pkgs.callPackage ./pkgs/rgsstool { };
+  jakym = pkgs.callPackage ./pkgs/jakym { };
   #radontea = pkgs.callPackage ./pkgs/radontea { };
-  #robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
-  #pciids = pkgs.callPackage ./pkgs/pciids { };
-  #autotoml = pkgs.callPackage ./pkgs/autotoml { };
+  robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
+  pciids = pkgs.callPackage ./pkgs/pciids { };
+  autotoml = pkgs.callPackage ./pkgs/autotoml { };
   #nexus-autodl = pkgs2505.callPackage ./pkgs/nexus-autodl { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };

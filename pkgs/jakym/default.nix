@@ -40,7 +40,9 @@ python3.pkgs.buildPythonApplication rec {
     description = "JAKYM, Just Another Konsole YouTube-Music. A command line based Youtube music player written in Python with both Spotify and Youtube playlist support and easy on memory. See README for installation instructions";
     homepage = "https://github.com/themayankjha/JAKYM";
     license = lib.licenses.gpl3Only;
-    maintainers = with lib.maintainers; [ szanko ];
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     mainProgram = "jakym";
     platforms = lib.platforms.all;
   };
