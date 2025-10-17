@@ -31,7 +31,9 @@ python3.pkgs.buildPythonApplication {
     description = "Script for unpacking GOG Linux installers";
     homepage = "https://github.com/Yepoleb/gogextract/tree/master";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ szanko ];
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     mainProgram = "gogextract";
     platforms = lib.platforms.all;
   };

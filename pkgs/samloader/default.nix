@@ -35,7 +35,9 @@ python3.pkgs.buildPythonApplication {
     description = "Download Samsung firmware from official servers";
     homepage = "https://github.com/martinetd/samloader";
     license = lib.licenses.gpl3Only;
-    maintainers = with lib.maintainers; [ szanko ];
+    maintainers =
+      let m = lib.maintainers or {};
+      in lib.optionals (m ? szanko) [ m.szanko ];
     mainProgram = "samloader";
     platforms = lib.platforms.all;
   };
