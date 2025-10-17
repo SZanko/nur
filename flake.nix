@@ -3,8 +3,9 @@
   inputs = {
     nixpkgs-2311.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-2411.url = "github:nixos/nixpkgs/nixos-24.11";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05"; # Currently not a maintainer in 25.05 but in 25.11
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
   outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-2311, nixpkgs-2411 }:
     let
