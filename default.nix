@@ -30,6 +30,7 @@ pkgs ? import <nixpkgs> { }
   pciids = pkgs.callPackage ./pkgs/pciids { };
   autotoml = pkgs.callPackage ./pkgs/autotoml { };
   #nexus-autodl = pkgs2505.callPackage ./pkgs/nexus-autodl { };
+  bsa-browser-cli = pkgs.callPackage ./pkgs/bsa-browser-cli { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
