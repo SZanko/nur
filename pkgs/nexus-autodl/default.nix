@@ -48,6 +48,7 @@ in
       maintainers = with maintainers; [ szanko ];
       mainProgram = "nexus-autodl";
       platforms   = platforms.linux;
+      broken = true;
     };
   }
 
