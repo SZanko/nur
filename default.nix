@@ -10,6 +10,7 @@
 pkgs ? import <nixpkgs> { } 
 , pkgs2311 ? pkgs
 , pkgs2411 ? pkgs
+, pkgs2505 ? pkgs
 , pkgsUnstable ? pkgs
 }:
 
@@ -28,7 +29,7 @@ pkgs ? import <nixpkgs> { }
   robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
   pciids = pkgs.callPackage ./pkgs/pciids { };
   autotoml = pkgs.callPackage ./pkgs/autotoml { };
-  nexus-autodl = pkgs2411.callPackage ./pkgs/nexus-autodl { };
+  nexus-autodl = pkgs2505.callPackage ./pkgs/nexus-autodl { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
