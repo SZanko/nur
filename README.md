@@ -1,3 +1,33 @@
+# SZanko's Nur Repositories
+
+## Programs
+
+### BSA Browser Cli
+```shell
+nix run github:szanko/nur#bsa-browser-cli
+```
+
+### samloader
+```shell
+nix run github:szanko/nur#samloader
+```
+
+### jakym
+```shell
+nix run github:szanko/nur#jakym
+```
+
+### gogextract
+```shell
+nix run github:szanko/nur#gogextract
+```
+
+### rgsstool
+```shell
+nix run github:szanko/nur#gogextract
+```
+
+```
 # nur-packages-template
 
 **A template for [NUR](https://github.com/nix-community/NUR) repositories**

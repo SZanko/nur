@@ -49,7 +49,7 @@ buildDotnetModule (finalAttrs:  {
     maintainers =
       let m = lib.maintainers or {};
       in lib.optionals (m ? szanko) [ m.szanko ];
-    mainProgram = "BSA-Browser-CLI";
+    mainProgram = "BSA_Browser_CLI";
     platforms = lib.platforms.all;
   };
 })

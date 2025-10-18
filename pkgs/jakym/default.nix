@@ -1,7 +1,7 @@
-{
-  lib,
-  python3,
-  fetchFromGitHub,
+{ lib
+, python3
+, fetchFromGitHub
+, ffmpeg-headless
 }:
 
 python3.pkgs.buildPythonApplication rec {
@@ -34,6 +34,10 @@ python3.pkgs.buildPythonApplication rec {
     beautifulsoup4
     colorama
     lxml
+    simpleaudio
+  ] 
+  ++ [
+    ffmpeg-headless
   ];
 
   meta = {

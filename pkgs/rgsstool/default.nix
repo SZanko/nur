@@ -21,8 +21,9 @@ python3.pkgs.buildPythonApplication {
   ];
   dontBuild = true;
   installPhase = ''
-    install -Dm0755 rgsstool.py $out/bin/rgsstool
-    patchShebangs $out/bin/rgsstool
+    install -Dm0644 rgsstool.py $out/libexec/rgsstool.py
+    makeWrapper ${python3.interpreter} $out/bin/rgsstool \
+      --add-flags $out/libexec/rgsstool.py
   '';
 
 
