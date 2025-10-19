@@ -27,6 +27,12 @@ nix run github:szanko/nur#gogextract
 nix run github:szanko/nur#gogextract
 ```
 
+### deflix-streamio
+```shell
+nix run github:szanko/nur#deflix-streamio
+```
+
+
 ```
 # nur-packages-template
 

@@ -32,6 +32,7 @@ pkgs ? import <nixpkgs> { }
   frozencpp = pkgs.callPackage ./pkgs/frozen-cpp { };
   #nexus-autodl = pkgs2505.callPackage ./pkgs/nexus-autodl { };
   bsa-browser-cli = pkgs.callPackage ./pkgs/bsa-browser-cli { };
+  deflix-stremio = pkgs.callPackage ./pkgs/deflix-stremio { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
