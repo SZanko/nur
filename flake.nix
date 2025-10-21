@@ -15,7 +15,13 @@
     {
       legacyPackages = forAllSystems (system: 
         let
-          pkgs = import nixpkgs { inherit system; };
+          pkgs = import nixpkgs {
+            inherit system;
+            config = {
+              allowUnfree = true;
+              allowUnsupportedSystem = true;
+            };
+          };
           pkgsUnstable = import nixpkgs-unstable { inherit system; };
           pkgs2311 = import nixpkgs-2311 { inherit system; };
           pkgs2411 = import nixpkgs-2411 { inherit system; };

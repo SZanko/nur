@@ -24,44 +24,44 @@ let
 
   a = assetFor sys;
 in
-stdenvNoCC.mkDerivation {
-  pname = "deflix-stremio";
-  version = "0.11.1";
+  stdenvNoCC.mkDerivation {
+    pname = "deflix-stremio";
+    version = "0.11.1";
 
-  src = fetchzip {
-    url       = a.url;
-    hash      = a.hash;
-    stripRoot = false;  # archive layout varies; keep root as-is
-  };
+    src = fetchzip {
+      url       = a.url;
+      hash      = a.hash;
+      stripRoot = false; 
+    };
 
-  dontBuild = true;
+    dontBuild = true;
 
-  installPhase = ''
-    runHook preInstall
-    mkdir -p "$out/bin"
+    installPhase = ''
+      runHook preInstall
+      mkdir -p "$out/bin"
 
-    # find the executable (works whether archive has a top-level dir or not)
-    exe="$(find "$src" -maxdepth 2 -type f -name '${a.exe}' -print -quit)"
-    if [ -z "$exe" ]; then
+      exe="$(find "$src" -maxdepth 2 -type f -name '${a.exe}' -print -quit)"
+      if [ -z "$exe" ]; then
       echo "ERROR: could not find ${a.exe} in $src" >&2
       echo "Contents:" >&2
       find "$src" -maxdepth 2 -type f >&2
       exit 1
-    fi
+      fi
 
-    install -Dm0755 "$exe" "$out/bin/${a.exe}"
-    runHook postInstall
-  '';
+      install -Dm0755 "$exe" "$out/bin/${a.exe}"
+      runHook postInstall
+    '';
 
-  meta = with lib; {
-    description = "Deflix addon for Stremio (prebuilt binary)";
-    homepage    = "https://github.com/doingodswork/deflix-stremio";
-    license     = licenses.agpl3Only;
-    maintainers =
-      let m = lib.maintainers or {};
-      in lib.optionals (m ? szanko) [ m.szanko ];
-    mainProgram = "deflix-stremio";
-    platforms   = [ "x86_64-linux" "x86_64-darwin" "x86_64-windows" ];
-  };
-}
+    meta = with lib; {
+      description = "Deflix addon for Stremio (prebuilt binary)";
+      homepage    = "https://github.com/doingodswork/deflix-stremio";
+      license     = licenses.agpl3Only;
+      maintainers =
+        let m = lib.maintainers or {};
+        in lib.optionals (m ? szanko) [ m.szanko ];
+      mainProgram = "deflix-stremio";
+      sourceProvenance = [ sourceTypes.binaryNativeCode ];
+      platforms   = [ "x86_64-linux" "x86_64-darwin" "x86_64-windows" ];
+    };
+  }
 

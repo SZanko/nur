@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     maintainers =
       let m = lib.maintainers or {};
       in lib.optionals (m ? szanko) [ m.szanko ];
-    mainProgram = "mmio";
     platforms = lib.platforms.all;
   };
 })
