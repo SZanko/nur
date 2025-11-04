@@ -35,8 +35,8 @@ pkgs ? import <nixpkgs> { }
   bsa-browser-cli = pkgs.callPackage ./pkgs/bsa-browser-cli { };
   deflix-stremio = pkgs.callPackage ./pkgs/deflix-stremio { };
   archive-org-downloader = pkgs.callPackage ./pkgs/archive.org-downloader { };
-  glojure = pkgs.callPackage ./pkgs/glojure { };
-  #salmagundi = pkgs.callPackage ./pkgs/salmagundi { };
+  #glojure = pkgs.callPackage ./pkgs/glojure { };
+  salmagundi = pkgs.callPackage ./pkgs/salmagundi { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
 }
